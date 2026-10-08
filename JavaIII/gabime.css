@@ -1,0 +1,44 @@
+/* 
+   KODI ORIGJINAL (me gabime):
+   
+   #poster {
+     color: white;
+     background: white;
+     width: 700px;
+     padding: 80px;
+   }
+   .poster {
+     color: #17263c;
+     width: 100%;
+   }
+
+   GABIMI 1 — Konflikti i ngjyres (kaskada):
+   #poster ka color: white edhe background: white.
+   .poster ka color: #17263c.
+   #poster fiton se ID selektori ka specifike 1,0,0
+   ndersa class selektori ka vetem 0,1,0.
+   Rezultati: tekst i bardhe mbi sfond te bardhe qe eshte i palexueshem.
+
+   GABIMI 2 — Tejkalimi i gjeresise (overflow):
+   #poster ka width: 700px dhe padding: 80px.
+   Pa box-sizing: border-box, gjeresia reale behet:
+   700px + 80px (majtas) + 80px (djathtas) = 860px.
+   Kjo tani del jashte ekranit ne pajisje me te vogla se 860px.
+
+   ZGJIDHJA:
+   - E heqim ID selektorin krejt
+   - Perdorim vetem class selektorin 
+   - I vendosim ngjyrat e duhura
+   - max-width ne vend te width per responsive
+   - box-sizing: border-box per me e perfshire padding ne gjeresi
+   */
+
+.poster {
+  color: #17263c;
+  background: white;
+  max-width: 700px;
+  width: 100%;
+  padding: 80px;
+  box-sizing: border-box;
+}
+

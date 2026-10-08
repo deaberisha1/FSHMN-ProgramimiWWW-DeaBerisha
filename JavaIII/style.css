@@ -1,0 +1,240 @@
+/* ===== CSS Variables (ngjyrat dhe hapesirat) ===== */
+:root {
+  --clr-primary: #0f7b6c;
+  --clr-primary-dark: #0a5c51;
+  --clr-bg: #f8f9fa;
+  --clr-white: #ffffff;
+  --clr-text: #1a1a1a;
+  --clr-text-muted: #555;
+  --clr-border: #ccc;
+  --clr-tag-free: #0f7b6c;
+  --clr-tag-limited: #555;
+  --clr-tag-online: #1a1a1a;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --radius: 12px;
+}
+
+/* ===== Reset & Box Model ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: var(--space-md);
+  background: var(--clr-bg);
+  color: var(--clr-text);
+}
+
+/* ===== Skip link (aksesueshmeri) ===== */
+.skip {
+  position: absolute;
+  left: -999px;
+}
+.skip:focus {
+  left: var(--space-md);
+  top: var(--space-md);
+  background: var(--clr-white);
+  padding: var(--space-sm) var(--space-md);
+  z-index: 10;
+  outline: 2px solid var(--clr-primary);
+}
+
+/* ===== Header ===== */
+header {
+  border-bottom: 4px solid var(--clr-primary);
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+header p {
+  margin: 0 0 0.25rem;
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* ===== Poster (afisha) ===== */
+.poster {
+  background: var(--clr-white);
+  border: 1px dashed var(--clr-border);
+  border-radius: var(--radius);
+  padding: var(--space-xl);
+  max-width: 700px;
+}
+
+/* ===== Tags (etiketat) =====
+   Tri etiketa dallohen me:
+   - ngjyre te ndryshme borduresh dhe teksti
+   - stil bordure (dashed per falas, solid per te tjerat)
+   - tekst pershkrues (jo vetem ngjyra)
+*/
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.tag--free {
+  border: 2px dashed var(--clr-tag-free);
+  color: var(--clr-tag-free);
+}
+.tag--limited {
+  border: 2px solid var(--clr-tag-limited);
+  color: var(--clr-tag-limited);
+}
+.tag--online {
+  border: 2px solid var(--clr-tag-online);
+  color: var(--clr-tag-online);
+}
+
+/* ===== Permbajtja e posterit ===== */
+.poster h2 {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.35rem;
+  color: var(--clr-text);
+}
+.meta {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  margin: 0 0 var(--space-md);
+}
+.desc {
+  font-size: 0.95rem;
+  color: var(--clr-text-muted);
+  margin: 0 0 var(--space-lg);
+}
+
+/* ===== Butoni i regjistrimit ===== */
+.btn {
+  display: inline-block;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.btn:hover {
+  background: var(--clr-primary-dark);
+}
+
+/* ===== Focus-visible =====
+   :focus-visible aktivizohet vetem kur perdoruesi
+   navigon me Tab (tastiere), jo me klikim te mausit.
+   Keshtu fokusi eshte i dukshem per aksesueshmeri
+   por nuk shfaqet kur klikohet me maus.
+*/
+.btn:focus-visible {
+  outline: 3px solid var(--clr-primary);
+  outline-offset: 3px;
+  background: var(--clr-primary-dark);
+}
+a:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 2px;
+}
+
+/* ===== Demo sections ===== */
+.demo-section {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  background: var(--clr-white);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  max-width: 700px;
+}
+.demo-section h2 {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.15rem;
+}
+.demo-nav {
+  display: flex;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+kbd {
+  background: #e9ecef;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  border: 1px solid var(--clr-border);
+}
+code {
+  background: #e9ecef;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+.note {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  line-height: 1.6;
+}
+
+/* ===== Box model demo ===== */
+.box-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+}
+.box {
+  padding: 20px;
+  border: 3px solid var(--clr-primary);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.box--content {
+  box-sizing: content-box;
+  width: 200px;
+  background: #fef3c7;
+}
+.box--border {
+  box-sizing: border-box;
+  width: 200px;
+  background: #d1fae5;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* ===== Responsive: 360px ===== */
+@media (max-width: 400px) {
+  body {
+    margin: var(--space-sm);
+  }
+  .poster,
+  .demo-section {
+    padding: var(--space-md);
+  }
+  .poster h2 {
+    font-size: 1.15rem;
+  }
+  .tags,
+  .demo-nav {
+    flex-direction: column;
+  }
+  .box-demo {
+    flex-direction: column;
+  }
+}

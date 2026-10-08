@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Klubi i debatit</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Kalo te permbajtja</a>
+    <header>
+      <p>Programimi ne WWW · Pikenisja</p>
+      <h1>Klubi i debatit</h1>
+    </header>
+    <main id="main">
+      <article class="poster">
+        <div class="tags">
+          <span class="tag tag--free">Falas</span>
+          <span class="tag tag--limited">Vende te kufizuara: 20</span>
+          <span class="tag tag--online">Edhe online</span>
+        </div>
+
+        <h2>A duhet kampusi te kete nje kopsht te perbashket?</h2>
+
+        <p class="meta">8 tetor, ora 16:00 · Salla imagjinare B</p>
+
+        <p class="desc">Sill nje argument, degjo nje mendim tjeter dhe ndrysho nje ide.</p>
+
+        <a class="btn" href="#">Kerko informacion</a>
+      </article>
+
+      <section class="demo-section">
+        <h2>Demonstrim: focus-visible</h2>
+        <p>Shtyp <kbd>Tab</kbd> per me navigu elementet. Fokusi tash shfaqet vetem kur perdoret tastiera e jo mausi:</p>
+        <nav class="demo-nav">
+          <a class="btn" href="#">Link 1</a>
+          <a class="btn" href="#">Link 2</a>
+          <a class="btn" href="#">Link 3</a>
+        </nav>
+        <p class="note">
+          <code>:focus-visible</code> aktivizohet vetem me tastiere (Tab).
+          <code>:focus</code> aktivizohet edhe me klikim — focus-visible eshte me i mire per sa i perket pjeses se aksesimit.
+        </p>
+      </section>
+
+      <section class="demo-section">
+        <h2>Shpjegim: box-sizing dhe box model</h2>
+        <p>CSS box model ka: <strong>content → padding → border → margin</strong>.</p>
+        <div class="box-demo">
+          <div class="box box--content">
+            <strong>content-box</strong> (default)<br />
+            width: 200px + padding: 20px + border: 3px<br />
+            = <em>246px reale</em>
+          </div>
+          <div class="box box--border">
+            <strong>border-box</strong> ★<br />
+            width: 200px (perfshine gjithcka)<br />
+            = <em>200px reale</em>
+          </div>
+        </div>
+        <p class="note">
+          Me <code>box-sizing: border-box</code>, width perfshine padding + border brenda vetes.
+          Pa ate, padding dhe border shtohen jashte width e kjo tani shkakton overflow.
+          Kjo ishte gabimi ne <code>gabime.css</code>: 700px + 80px padding x 2 = 860px.
+        </p>
+      </section>
+    </main>
+    <footer>Shembull mesimor · Te dhena te sajuara · Vetem front end</footer>
+  </body>
+</html>
