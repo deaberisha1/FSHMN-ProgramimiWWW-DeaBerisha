@@ -1,0 +1,55 @@
+/* Prova 1 · Gr.4 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+/* u hoq a:focus { outline: none; } */
+a:focus-visible {
+  outline: 3px solid #d9480f;
+  outline-offset: 3px;
+}
+
+.burimet {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.burimi {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.burimi a {
+  display: block;
+}
+
+.panel {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 2px solid #0b4f9c;
+  white-space: normal;     /* ishte nowrap */
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 700px) {
+  .burimet {
+    grid-template-columns: 1fr 1fr;
+  }
+  .burimi:first-child {
+    grid-column: 1 / -1;
+  }
+}
