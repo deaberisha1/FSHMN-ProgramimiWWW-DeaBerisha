@@ -1,4 +1,4 @@
-/* Prova 1 · Gr.4 */
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 1rem;
   font-family: Arial, sans-serif;
+  overflow-wrap: anywhere;
 }
 
 .menu {
@@ -16,7 +17,6 @@ body {
   list-style: none;
 }
 
-/* u hoq a:focus { outline: none; } */
 a:focus-visible {
   outline: 3px solid #d9480f;
   outline-offset: 3px;
@@ -41,8 +41,7 @@ a:focus-visible {
   width: 100%;
   padding: 1rem 1.25rem;
   border: 2px solid #0b4f9c;
-  white-space: normal;     /* ishte nowrap */
-  overflow-wrap: anywhere;
+  white-space: normal;    
 }
 
 @media (min-width: 700px) {
