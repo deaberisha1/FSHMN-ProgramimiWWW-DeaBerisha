@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 1rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+a:focus-visible {
+  outline: 3px solid #c2410c;
+  outline-offset: 3px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+
+.banner {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.kartat {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.karta {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.karta h3,
+.karta p {
+  margin: 0 0 0.5rem;
+}
+
+.karta a {
+  margin-top: auto;
+}
+
+@media (min-width: 600px) {
+  .kartat {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .kartat {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
